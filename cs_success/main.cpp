@@ -60,6 +60,7 @@ void half_day_process(){ // when time flows a day, it needs the following steps
     center.mediumRisk_process(date_treat, &btree_delaytreated_3, &btree_treated_3, &btree_appointment_3, &btree_registered_3, center.center3);
     center.treatment_process(date_treat, &btree_delaytreated_3, &btree_treated_3, &btree_appointment_3, &btree_registered_3, center.center3); // treat queue generated
     center.appointment_process(date_treat, &btree_delaytreated_3, &btree_treated_3, &btree_appointment_3, &btree_registered_3, center.center3); // appointment queue generated
+    /*
     cout<<"1abc"<<endl;
         btree_treated_1.printpoint();
         
@@ -79,13 +80,21 @@ void half_day_process(){ // when time flows a day, it needs the following steps
         btree_appointment_2.printpoint();
         cout<<"3abc"<<endl;
         btree_appointment_3.printpoint();
+        */
 }
 
 
 void choice_1(){
+    while(week<6){
+        choice_0();
+    }
+    choice_0();
+    choice_0();
+    /*
     for(int i=1;i<=14;i++){
         choice_0();
     }
+    */
     return;
 }
 
@@ -102,7 +111,7 @@ void choice_3(){
 void choice_2(){
     int days=months[month];
     int remain_days = days-day; // the rest day of this month;
-    for(int i=1;i<=2*remain_days;i++){
+    for(int i=1;i<=2*remain_days+2;i++){
         choice_0();
     }
 	return;
@@ -117,6 +126,7 @@ void choice_0(){
     
 	if(day==28){
 		if(month==2){
+            cout<<"Month report generated"<<endl;
 			center.month_report(&btree_treated_1,&btree_appointment_1,&btree_registered_1,center.center1->withdraw_number);
             center.month_report(&btree_treated_2,&btree_appointment_2,&btree_registered_2,center.center2->withdraw_number);
             center.month_report(&btree_treated_3,&btree_appointment_3,&btree_registered_3,center.center3->withdraw_number); // if the month is ended, begin the month report
@@ -126,7 +136,7 @@ void choice_0(){
 	}
 	else if(day==31){
 		if(month==1||month==3||month==5||month==7||month==8||month==10||month==12){
-			
+			cout<<"Month report generated"<<endl;
             center.month_report(&btree_treated_1,&btree_appointment_1,&btree_registered_1,center.center1->withdraw_number);
             center.month_report(&btree_treated_2,&btree_appointment_2,&btree_registered_2,center.center2->withdraw_number);
             center.month_report(&btree_treated_3,&btree_appointment_3,&btree_registered_3,center.center3->withdraw_number); // if the month is ended, begin the month report
@@ -136,6 +146,7 @@ void choice_0(){
 	}
 	else if(day==30){
         if(month==4||month==6||month==9||month==11){
+            cout<<"Month report generated"<<endl;
             center.month_report(&btree_treated_1,&btree_appointment_1,&btree_registered_1,center.center1->withdraw_number);
             center.month_report(&btree_treated_2,&btree_appointment_2,&btree_registered_2,center.center2->withdraw_number);
             center.month_report(&btree_treated_3,&btree_appointment_3,&btree_registered_3,center.center3->withdraw_number); // if the month is ended, begin the month report
@@ -148,6 +159,7 @@ void choice_0(){
 	week++;
 	if(week==7){
 		//center.print();
+        cout<<"Week report generated"<<endl;
         center.week_report(&btree_treated_1,&btree_appointment_1,&btree_registered_1);
         center.week_report(&btree_treated_2,&btree_appointment_2,&btree_registered_2);
         center.week_report(&btree_treated_3,&btree_appointment_3,&btree_registered_3);
