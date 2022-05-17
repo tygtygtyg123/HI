@@ -1,0 +1,12 @@
+72,Olin,8,2005,1,8 days
+81,Finbar,7,2004,3,7 days
+20,Island,1,2004,3,13 days
+92,Nursing,4,2002,3,4 days
+80,Strawberry,2,2001,0,7 days
+115,Strength,4,2001,1,6 days
+117,Peyton,4,2001,1,4 days
+50,Stranger,5,1999,1,10 days
+84,Kingsley,2,1998,0,7 days
+89,Patricia,7,1993,0,7 days
+145,Fighter,2,1991,1,1 days
+33,Firm,8,1985,1,13 days
